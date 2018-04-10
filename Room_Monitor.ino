@@ -7,7 +7,7 @@
 #define RX 4
 #define BMP_SCK 13
 #define BMP_MISO 12
-#define BMP_MOSI 11 
+#define BMP_MOSI 11
 #define BMP_CS 10
 
 Akeru akeru(RX, TX);
@@ -23,7 +23,6 @@ void setup() {
 void loop() {
 
   sigfoxSend();
-  bmp280Values();
 
 }
 
