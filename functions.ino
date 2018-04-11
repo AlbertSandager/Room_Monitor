@@ -32,19 +32,19 @@ void sigfoxSend() {
     Serial.println("Message sent !");
   }
 
-
-  for (int second = 0; second < 600; second++)
-  {
-    delay(1000);
-  }
-
-
   /*
-    // Wait for 24 hours.
-    for (int second = 0; second < 86400; second++)
+    for (int second = 0; second < 600; second++)
     {
       delay(1000);
     }
   */
+
+
+  // Wait for 24 hours.
+  for (int second = 0; second < 86400; second++)
+  {
+    delay(1000);
+  }
+
 
 }

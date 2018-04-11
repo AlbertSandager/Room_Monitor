@@ -15,8 +15,8 @@ Adafruit_BMP280 bmp;
 
 void setup() {
 
-  sigfoxConfig();
   bmp280Config();
+  sigfoxConfig();
 
 }
 
