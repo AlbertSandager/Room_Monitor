@@ -1,6 +1,6 @@
 void sigfoxConfig() {
   Serial.begin(9600);
-  Serial.println("Starting...");
+  Serial.println("Starting Sigfox-module...");
 
   if (!akeru.begin())
   {
@@ -12,7 +12,7 @@ void sigfoxConfig() {
 
 void bmp280Config() {
   Serial.begin(9600);
-  Serial.println(F("BMP280 test"));
+  Serial.println(F("Starting BMP280..."));
 
   if (!bmp.begin()) {
     Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
@@ -29,16 +29,16 @@ void sigfoxSend() {
 
   if (akeru.sendPayload(msg))
   {
-    Serial.println("Message sent !");
+    Serial.println("Message sent!");
   }
 
   /*
+    // Wait for 10 minutes
     for (int second = 0; second < 600; second++)
     {
       delay(1000);
     }
   */
-
 
   // Wait for 24 hours.
   for (int second = 0; second < 86400; second++)
