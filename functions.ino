@@ -38,13 +38,22 @@ void sigfoxSend() {
     {
       delay(1000);
     }
-  */
 
-  // Wait for 24 hours.
-  for (int second = 0; second < 86400; second++)
-  {
+    // Wait for 24 hours.
+    for (int second = 0; second < 86400; second++)
+    {
     delay(1000);
-  }
-
-
+    }
+  */
 }
+
+
+void waitaDay() {
+  long waitTime = 86400000;
+  unsigned long startT, endT;
+  startT = millis();
+  while (endT - startT <= waitTime) {
+    endT = millis();
+  }
+}
+
