@@ -9,21 +9,13 @@ void sigfoxConfig() {
   }
 }
 
+void temperaturesensor() {
 
-void bmp280Config() {
-  Serial.begin(9600);
-  Serial.println(F("Starting BMP280..."));
-
-  if (!bmp.begin()) {
-    Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
-    while (1);
-  }
 }
 
-
 void sigfoxSend() {
-  String p = akeru.toHex(bmp.readPressure());
-  String t = akeru.toHex(bmp.readTemperature());
+  String p = akeru.toHex(255);
+  String t = akeru.toHex(255);
 
   String msg = p + t; // Put everything together
 
